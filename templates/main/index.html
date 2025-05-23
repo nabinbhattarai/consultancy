@@ -1,0 +1,305 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Venue Education</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel='stylesheet' href="{% static 'css/style.css' %}">
+</head> 
+<body>
+    <div id="hero-container">
+        <nav class="navbar">
+            <a href="#" class="brand-logo pl-lg-5 pl-2"><img class="logo" src="{% static 'images/logo.png' %}" alt=""></a>
+            <span class="toggle"><i class="fa fa-bars menu ml-auto"></i></span>
+            <ul class="navbar-list">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#about-container ">Our Work</a></li>
+                <li><a href="#our-process">Our Process</a></li>
+                <li><a href="#our-college">Our Colleges</a></li>
+                <li><a href="#testimonial-section">Testimonial</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    <!--hero container  -->
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="hero-text-container mt-lg-5 text-white">
+                    <h1 class="mb-lg-4">Best Career Counsellor & Admission Consultant</h1>
+                    <p class="mb-lg-4">Right Decision Today, Bright Future Tomorrow</p>
+                    <a href="#contact-us" class="btn btn-contact mr-lg-4">Contact Us</a>
+                    <a href="#about-container" class="btn btn-know">Know More</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-6">
+                <div class="rectangle-image mt-lg-3">
+                        <!--<img src="assets/img5.jpg" class="img-fluid main-img" alt="">-->
+                        <div class="w3-content w3-section" style="max-width:500px; height: 300px;">
+                            <img class="mySlides" src="{% static 'images/study.jpg' %}" style="border-radius:35px; margin-top: 95px; width: 100%; height: 100%; margin-left: 55px;">
+
+
+                            <img class="mySlides" src="{% static 'images/study1.jpg' %}" style="border-radius:35px; margin-top: 95px; width: 100%; height: 100%; margin-left: 55px;">
+
+                            <img class="mySlides" src="{% static 'images/study2.jpg' %}" style="border-radius:35px; margin-top: 95px; width: 100%; height: 100%; margin-left: 55px;">
+
+                        </div>
+                          
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- second about container -->
+        <div class="about-container container-width" id="about-container">
+            <h1 class="text-center mb-3">What Do We Do ?</h1>
+            <h5 class="text-center mb-lg-5 mb-2 what-subheading">Helps to find your Passion and Courses that suits you !!</h5>
+            <div class="row mx-auto">
+                <div class="col-lg-3 col-md-6 col-12 mx-auto about-first about-inner">
+                    <h4 class="text-center my-2 mb-3 about-heading">Our Services</h4>
+                        <p><img src="{% static 'images/scholarship.png' %}" class="mr-2" alt="">Ilets</p>
+                        <p><img src="{% static 'images/scholarship.png' %}" class="mr-2" alt="">PTE</p>
+                        <p><img src="{% static 'images/scholarship.png' %}" class="mr-2" alt="">TOFEL</p>
+                        <p><img src="{% static 'images/scholarship.png' %}" class="mr-2" alt="">GRE</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mx-auto col-12 about-second about-inner">
+                    <h4 class="text-center my-2 mb-3 about-heading">Our Courses</h4>
+                        <p><img src="{% static 'images/scholarship.png' %}" class="mr-2" alt="">Information Technology</p>
+                        <p><img src="{% static 'images/scholarship.png' %}" class="mr-2" alt="">Bachelors of Nursing</p>
+                        <p><img src="{% static 'images/scholarship.png' %}" class="mr-2" alt="">Engineering</p>
+                        <p><img src="{% static 'images/scholarship.png' %}" class="mr-2" alt="">Medical field </p>
+                </div>
+                <div class="col-lg-5 col-md-12 col-12  about-third about-inner px-4">
+                    <h3 class="mb-3 my-2 about-heading text-center">About Us</h3>
+                    <!-- <img src="assets/img4.jpg" class="img-fluid mb-4" height="200" alt=""> -->
+                    <p class="text-justify">Venue Education Consultancy is one of the leading education Consultancy in Nepal. With the best Counsellor available </p>
+                </div>
+            </div>
+        </div>
+    
+    <!-- third our process -->
+        <div class="our-process" id="our-process">
+            <h1 class="text-center mb-5 ">Our Process</h1>
+            <div class="row mx-auto">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="services-inner">
+                        <img src="{% static 'images/services-5.png' %}" class="mb-4" class="mb-4" alt="">
+                        <h5 class="mb-3">Counselling</h5>
+                        <p>A discussion with our expert professionals provide the options to the students that help them to select institution & course.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="services-inner">
+                        <img src="{% static 'images/services-2.png' %}" class="mb-4" alt="">
+                        <h5 class="mb-3">Process</h5>
+                        <p>We help students with admission formalities, Fees details, commitment, payment term and documents required.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="services-inner">
+                        <img src="{% static 'images/services-3.png' %}" class="mb-4" alt="">
+                        <h5 class="mb-3">Admission</h5>
+                        <p>We assure hassless admission. We encourage you to visit college at the time of admission and look all the facilities with own.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="services-inner">
+                        <img src="{% static 'images/services-4.png' %}" class="mb-4" alt="">
+                        <h5 class="mb-3">Support</h5>
+                        <p>Our support is not only till the admission but to your last year and help wherever needed and help you whenever you need help.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    <!-- our college -->
+        <div class="our-college" id="our-college">
+            <h1 class="text-center mb-5 ">Our Colleges</h1>
+            <div class="slider slider-area" >
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/uk.jpg' %}" class="card-img-top" height="170" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">United Kingdom</h5>
+                            <h6>Australia</h6>
+                            <p class="card-text">Studying in the UK can be a great opportunity to gain a world-class education and experience a new culture.</p>
+                            <a href="#contact-us" class="apply">Apply now &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/can.jpg' %}" class="card-img-top" height="170"  alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Canada</h5>
+                            <h6>Canada</h6>
+                            <p class="card-text">Studying in Canada can be a great opportunity to gain a high-quality education and experience a new culture</p>
+                            <a href="#contact-us" class="apply">Apply now &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/usa.jpg' %}" class="card-img-top" height="170" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">United states of America</h5>
+                            <h6>Canada</h6>
+                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
+                            <a href="#contact-us" class="apply">Apply now &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/aus.jpg' %}" class="card-img-top" height="170" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Australia</h5>
+                            <h6>United Kingdom</h6>
+                            <p class="card-text">Studying in Australia can be a great opportunity to gain a high-quality education and experience a new culture</p>
+                            <a href="#contact-us" class="apply">Apply now &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                   
+            </div>
+        </div>
+    
+    <!-- testimonial section -->
+        <div class="testimonial-section" id="testimonial-section">
+            <h1 class="text-center mb-5 ">Testimonial</h1>
+            <div class="row">
+                <div class="col-md-3 text-center mb-5">
+                    <div class="profile">
+                        <img src="{% static 'images/bunu.jpg' %}" alt="" class="user img-fluid">
+                        <blockquote>
+                            I would like to thank <b>Venue Education Consultancy</b> and will encourage all of you to approach them if you have want to study, they will guide you the best college.
+                        </blockquote>
+                        <h5>Swostika Poudel <br><span>Littel Angles college, Hattiban</span></h5>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-5">
+                    <div class="profile">
+                        <img src="{% static 'images/prem.jpg' %}" alt="" class="user img-fluid">
+                        <blockquote>
+                            I was properly guided and the entire process was hassle free. My sincere gratitude to <b>Venue Education Consultancy</b> for making my dream come true.
+                        </blockquote>
+                        <h5>Prem Kumar Bista<br><span>Birendra Namuna College, Chandragadi</span></h5>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-5">
+                    <div class="profile">
+                        <img src="{% static 'images/saurav.jpg' %}" alt="" class="user img-fluid">
+                        <blockquote>
+                            I was very confused after XII. Not knowing where to take admission, then <b>Venue Education Consultancy</b> help me to select the best option that suits me.
+    
+                        </blockquote>
+                        <h5>Saurav Bhattarai<br><span>KIST college,<br> Kathmandu</span></h5>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-5">
+                    <div class="profile">
+                        <img src="{% static 'images/gaurav.jpg' %}" alt="" class="user img-fluid">
+                        <blockquote>
+                            Becoming a Doctor is my dream but fees was beyond my reach. But <b>Venue Education Consultancy</b>, gave me options where I could enroll myself without worry.
+                        </blockquote>
+                        <h5>Gaurav Bhattarai <br><span>Merryland college, Biratnagar</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- contact us -->
+        <div class="contact-us" id="contact-us">
+            <h1 class="text-center mb-5 ">Contact Us</h1>
+            <div class="form text-center">
+                <form action="" method="POST" class="myform">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name" name="name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your State" name="state">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Mobile" name="mobile">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Interested College" name="college">
+                            </div>
+                            <div class="form-group">
+                                <select name="courses" id="" class="form-control">
+                                    <option value="null" disabled selected>Select Courses</option>
+                                    <option value="b-tech">B-Tech</option>
+                                    <option value="pharmacy">Pahrmacy</option>
+                                    <option value="m-tech">M-Tech</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input class="btn btn-submit" type="submit" name="submit" >
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <!-- footer section -->
+        <footer class="bg-dark text-white">
+            <div class="row pt-lg-5 p-md-4 p-3">
+                <div class="col-lg-4 col-md-4 col-12">
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;3rd floor, Sankhamul Tower, Sankhamul</p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> &nbsp; +977 9862657171</p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; venueedu1@gmail.com</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 footer-nav">
+                    <!-- <li><h6>Important Links</h6></li> -->
+                    <li><a href="#hero-container">Home</a></li>
+                    <li><a href="#about-container">Our Work</a></li>
+                    <li><a href="#our-process">Our Process</a></li>
+                    <li><a href="#our-college">Our Colleges</a></li>
+                    <li><a href="#testimonial-section">Testimonials</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 footer-links">
+                    <div class="footer-about">
+                        <h6>About The Company</h6>
+                        <p>Venue Education is the leading education consultancy in Nepal.</p>
+                    </div>
+                    <p><a href=""><i style="color:#39579D; " class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>&nbsp;
+                        <a href=""><i style="color: #B221B6;" class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>&nbsp;
+                        <a href=""><i style="color: #016FB1;" class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>&nbsp;
+                        <a href=""><i style="color: #D84937;" class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a>&nbsp;
+                    </p>
+                </div>
+            </div>
+            <span class="text-center d-block pb-lg-4 pb-3 px-lg-3 px-2">COPYRIGHT&copy; Venue Education 2023, All right reserved | Designed by NABIN BHATTARAI</>
+        </footer>
+    
+    
+    </body>
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="https://use.fontawesome.com/c1a8023b0e.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</html>

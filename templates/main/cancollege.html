@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            college list
+        </title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+        <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+        <link rel='stylesheet' href="{% static 'css/style.css' %}">
+        <style>
+            .card{
+                width: 270px !important;
+                float: right;
+                margin-top: 15px;
+  
+            }
+            .our-college{
+                padding: 5px 55px 65px 55px;
+                margin-top: 10px;
+            }
+            .our-college h1::after{
+                content: "";
+                background: #43CEA2;
+                display: block;
+                height: 4px;
+                width: 170px;
+                margin: 20px auto 10px;
+            }
+            .apply{
+                color: #43CEA2 !important;
+            }
+            .card-body{
+                background-color: #241C60;
+                color: #fff;
+            }
+            .card-body a{
+                color: #43CEA2;
+            }
+            .card-body a:hover{
+                text-decoration: none;
+            }
+            .btn-contact{
+                background-color:darkblue;
+                border: none;
+                font-weight: 400;
+                color:white;
+                border-radius: 8px;
+                padding: 8px 18px;
+                border: 1px solid black;
+                }
+                @media only screen and (max-width:425px){
+
+                    .our-college{
+                        padding: 0 29px 35px 30px;
+                    }
+                    .our-college h1::after{
+                        height: 3px;
+                        width: 90px;
+                        margin: 10px auto 10px;
+                    }
+                    .our-college h1{
+                        font-size: 27px;;
+                    }
+                    .card-text{
+                        font-size: 14px;
+                    }
+                }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="our-college" id="our-college">
+                <h1 class="text-center mb-5 ">Best College in Canada</h1>
+                <div class="slider slider-area" >
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/Oxford.jpg' %}"class="card-img-top" height="170" alt="">
+                        <div class="card-body">
+                            <h5 style="color: red;" class="card-title"><b> Oxford University</b></h5>
+                            <p class="card-text">Studying in the UK can be a great opportunity to gain a world-class education and experience a new culture. </p>
+                            <a href="{% url 'ukcollege' %}" class="btn btn-contact mr-lg-4"><b> View Details</b></a>
+                        </div>
+                    </div>
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/cam.jpg' %}" class="card-img-top" height="170"  alt="">
+                        <div class="card-body">
+                            <h5 style="color: red;" class="card-title"><b>Cambridge University</b></h5>
+                            <p class="card-text">Studying in Australia can be a great opportunity to gain a high-quality education and experience a new culture</p>
+                            <a href="{% url 'auscollege' %}"class="btn btn-contact mr-lg-4"><b> View Details</b></a>
+                        </div>
+                    </div>
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/man.jpg' %}" class="card-img-top" height="170" alt="">
+                        <div class="card-body">
+                            <h5 style="color: red;" class="card-title"><b>Manchester University</b></h5>
+                            <p class="card-text">Studying in Canada can be a great opportunity to gain a high-quality education and experience a new culture</p>
+                            <a href="{% url 'cancollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
+                        </div>
+                    </div>
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/lon.jpg' %}" class="card-img-top" height="170" alt="">
+                        <div class="card-body">
+                            <h5 style="color: red;" class="card-title"><b> University of London </b></h5>
+                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
+                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
+                        </div>
+                    </div>
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/che.jpg' %}" class="card-img-top" height="170" alt="">
+                        <div class="card-body">
+                            <h5 style="color: red;" class="card-title"><b> Chelsea University </b></h5>
+                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
+                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
+                        </div>
+                    </div>
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/imp.jpg' %}" class="card-img-top" height="170" alt="">
+                        <div class="card-body">
+                            <h5 style="color: red;" class="card-title"><b> Imperial College London </b></h5>
+                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
+                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
+                        </div>
+                    </div>
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/bir.jpg' %}" class="card-img-top" height="170" alt="">
+                        <div class="card-body">
+                            <h5 style="color: red;" class="card-title"><b> University of Birmingham </b></h5>
+                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
+                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
+                        </div>
+                    </div>
+                    <div class="card ml-lg-3 ml-5">
+                        <img src="{% static 'images/edi.jpg' %}" class="card-img-top" height="170" alt="">
+                        <div class="card-body">
+                            <h5 style="color: red;" class="card-title"><b> The University of Edinburgh </b></h5>
+                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
+                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
