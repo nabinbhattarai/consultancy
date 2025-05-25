@@ -19,34 +19,33 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
+    <nav class="navbar">
+      <a href="#hero-container" class="brand-logo"
+        ><img class="logo" src="{% static 'images/logo.png' %}" alt=""
+      /></a>
+      <div class="mobile-nav">
+        <span class="toggle"><i class="fa fa-bars menu ml-auto"></i></span>
+        <ul class="navbar-list">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-container ">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#our-process">Our Process</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#our-college">Study Abroad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonial-section">Testimonial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <div id="hero-container">
-      <nav class="navbar">
-        <a href="#hero-container" class="brand-logo"
-          ><img class="logo" src="{% static 'images/logo.png' %}" alt=""
-        /></a>
-        <div class="mobile-nav">
-          <span class="toggle"><i class="fa fa-bars menu ml-auto"></i></span>
-          <ul class="navbar-list">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about-container ">Our Work</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#our-process">Our Process</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#our-college">Study Abroad</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonial-section">Testimonial</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact-us">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
       <!--hero container  -->
       <div class="career-counsel">
         <div class="hero-text-container text-white">
@@ -614,4 +613,19 @@
   <script src="https://use.fontawesome.com/c1a8023b0e.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="{% static 'js/main.js' %}"></script>
+
+  <script>
+    var closeNavbarList = () => {
+      const narBarItem = document.querySelector(".navbar-list");
+      if (narBarItem.classList.contains("active")) {
+        narBarItem.classList.remove("active");
+      }
+    };
+    // autoclose navbar-list after click
+    document.querySelectorAll(".navbar .nav-link").forEach((item) => {
+      item.addEventListener("click", closeNavbarList);
+    });
+
+    document.addEventListener("scroll", closeNavbarList);
+  </script>
 </html>
