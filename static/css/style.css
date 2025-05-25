@@ -1,6 +1,17 @@
 :root {
-  --primary-color-blue: #2E307C;
-  --primary-color-red: #D92028;
+  --primary: #2e307c;
+  --onPrimary: #ffffff;
+  --primaryContainer: #c7c8ec;
+  --onPrimaryContainer: #1d1f5a;
+  --secondary: #d92028;
+  --onSecondary: #ffffff;
+  --secondaryContainer: #f6cdd0;
+  --onSecondaryContainer: #851417;
+  --background: #f5f5f7;
+  --onBackground: #1b1b1f;
+  --surface: #ffffff;
+  --onSurface: #2d2d2d;
+  --outline: #a5a5b0;
 }
 
 * {
@@ -43,7 +54,7 @@ body {
   background-color: transparent;
   padding-right: 8px;
   font-size: 24px;
-  color: #fff;
+  color: var(--onSecondary);
   text-align: right;
   display: none;
   cursor: pointer;
@@ -67,18 +78,16 @@ nav {
 
 .navbar ul li {
   display: inline-block;
-  text-align: right;
 }
 .navbar ul li:hover {
   cursor: pointer;
 }
 .navbar ul li a:hover {
   text-decoration: none;
-  color: #fff;
 }
 .navbar ul li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--onSecondary);
 }
 .career-counsel {
   display: flex;
@@ -98,11 +107,11 @@ nav {
   }
 
   a {
-    color: aliceblue;
-    border-color: aliceblue;
+    color: var(--onSecondary);
+    border-color: var(--onSecondary);
 
     &.btn-contact {
-      background-color: var(--primary-color-blue);
+      background-color: var(--primary);
       border: none;
       &:hover {
         color: unset;
@@ -115,7 +124,7 @@ nav {
   flex-shrink: unset;
 
   > img {
-    border: 5px solid rgb(24, 199, 243);
+    border: 5px solid var(--outline);
     border-radius: 35px;
     width: 500px;
     height: 350px;
@@ -160,7 +169,7 @@ nav {
 }
 .btn-know:hover {
   /* font-weight: 500; */
-  color: #fff;
+  color: var(--onSecondary);
 }
 
 .main-img {
@@ -269,7 +278,7 @@ nav {
 }
 .card-body {
   background-color: #241c60;
-  color: #fff;
+  color: var(--onSecondary);
 }
 .card-body h5 {
   color: hotpink;
@@ -357,7 +366,7 @@ blockquote::after {
   background-color: #43cea2;
   border: none;
   font-weight: 400;
-  color: #fff;
+  color: var(--onSecondary);
   border-radius: 8px;
   padding: 6px 12px;
   display: inline-block;
@@ -378,11 +387,11 @@ select:focus {
 }
 .footer-nav li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--onSecondary);
 }
 .footer-links a {
   text-decoration: none;
-  color: #fff;
+  color: var(--onSecondary);
 }
 
 @media only screen and (max-width: 850px) {
@@ -392,6 +401,23 @@ select:focus {
       white-space: nowrap;
     }
   }
+
+  .navbar-list {
+    text-align: right;
+    .nav-item {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+
+    &.active {
+      .nav-item {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
   .logo {
     width: 100px;
     height: 100px;
@@ -403,20 +429,6 @@ select:focus {
   .slides {
     display: none;
   }
-  ul {
-    width: 100%;
-    display: none;
-  }
-  ul li {
-    display: block;
-    text-align: center;
-    width: 100%;
-    cursor: pointer;
-  }
-  .active {
-    display: block;
-  }
-
   .about-inner {
     padding: 15px;
   }
