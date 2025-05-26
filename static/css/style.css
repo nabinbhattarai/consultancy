@@ -1,8 +1,8 @@
 :root {
   --primary: #2e307c;
   --onPrimary: #ffffff;
-  --primaryContainer: #c7c8ec;
-  --onPrimaryContainer: #1d1f5a;
+  --primaryContainer: #1d1f5a;
+  --onPrimaryContainer: #c7c8ec;
   --secondary: #d92028;
   --secondaryContainer: #f6cdd0;
   --onBackgroundContainer: #851417;
@@ -11,6 +11,7 @@
   --surface: #ffffff;
   --onSurface: #2d2d2d;
   --outline: #a5a5b0;
+  --support-green: #33dbc6;
 }
 
 * {
@@ -73,7 +74,7 @@ li {
 @keyframes shrinkOnScroll {
   from {
     width: 100px;
-    margin: 20px 0 0 40px;
+    margin: 20px 0 0 32px;
   }
   to {
     width: 45px;
@@ -138,8 +139,7 @@ li {
       }
 
       .nav-link {
-        padding: 0;
-        margin: 6px;
+        padding: 6px;
         color: inherit;
       }
 
@@ -175,8 +175,8 @@ li {
     border-color: var(--background);
 
     &.btn-contact {
-      background-color: var(--primary);
-      color: var(--onPrimary);
+      background-color: var(--primaryContainer);
+      color: var(--background);
       border: none;
       &:hover {
         color: unset;
@@ -202,13 +202,80 @@ li {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left top;
-  padding: 20px;
+  padding: 32px;
   width: 100%;
   display: flex;
   min-height: 450px;
   flex-direction: column;
   justify-content: space-between;
   padding-top: 150px;
+}
+
+.about-container {
+  padding: 32px;
+  h1::after {
+    content: "";
+    background: var(--support-green);
+    display: block;
+    height: 5px;
+    width: 170px;
+    margin: 20px auto 10px;
+  }
+
+  h5 {
+    margin: 20px 0;
+  }
+}
+
+.about-us {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.about-us-item {
+  background-color: var(--primaryContainer);
+  color: var(--onPrimaryContainer);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 16px var(--outline);
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
+
+  h4 {
+    padding: 10px;
+
+    &::after {
+      content: "";
+      background: var(--support-green);
+      display: block;
+      height: 5px;
+      width: 200px;
+      margin: 10px auto 0;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      padding: 12px;
+
+      svg {
+        padding-top: 5px;
+        fill: var(--support-green);
+      }
+
+      span {
+        margin-left: 12px;
+      }
+    }
+  }
 }
 
 .main-img {
@@ -219,54 +286,11 @@ li {
   margin-left: 55px;
 }
 
-/* about section */
-.container-width {
-  padding: 65px 80px 65px 80px;
-}
 .border-custom {
   border-bottom: 5px solid #43cea2;
   max-width: 390px;
   line-height: 65px;
   margin: 0 auto;
-}
-.about-container h1::after {
-  content: "";
-  background: #43cea2;
-  display: block;
-  height: 4px;
-  width: 170px;
-  margin: 15px auto 15px;
-}
-.about-inner {
-  /* border: 1px solid red; */
-  padding: 25px;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
-}
-
-.about-first ul li {
-  font-weight: 500;
-  padding: 12px 0;
-  list-style-type: none;
-}
-.about-second ul li {
-  font-weight: 500;
-  padding: 12px 0;
-  list-style-type: none;
-}
-.about-first:hover {
-  transform: scale(1.02);
-  transition: 0.2s all ease-in-out;
-  cursor: pointer;
-}
-.about-second:hover {
-  transform: scale(1.02);
-  transition: 0.2s all ease-in-out;
-  cursor: pointer;
-}
-.about-third:hover {
-  transform: scale(1.02);
-  transition: 0.2s all ease-in-out;
-  cursor: pointer;
 }
 /* process */
 .our-process {
@@ -505,9 +529,6 @@ select:focus {
   .about-second ul li {
     font-size: 16px;
   }
-  .about-container {
-    padding: 0px 45px 20px 50px;
-  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -536,33 +557,6 @@ select:focus {
   /* about container */
   .our-process h1 {
     font-size: 27px;
-  }
-  .about-container {
-    padding: 0px 25px 20px 25px;
-  }
-
-  .about-container h1 {
-    font-size: 27px;
-  }
-  .about-container h1::after {
-    height: 3px;
-    width: 90px;
-    margin: 10px auto 10px;
-  }
-  .about-container h5 {
-    font-size: 14px;
-  }
-  .about-first ul li {
-    font-size: 16px;
-  }
-  .about-second ul li {
-    font-size: 16px;
-  }
-  .about-inner {
-    margin: 15px 0 15px 0;
-  }
-  .about-third p {
-    font-size: 14px;
   }
   /* process */
   .our-process {
