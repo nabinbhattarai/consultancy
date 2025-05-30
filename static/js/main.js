@@ -1,56 +1,50 @@
+const startScroller = () => {
+  const SCROLL_CONTENT_WIDTH = 300;
+  const CONTENT_GAP = 50;
+  const CONTENT_PADDING = 32;
+  // testimonial wrapper
+  const testimonialWrapper = document.querySelector('.testimonials');
+  // testimonials
+  const testimonials = document.querySelectorAll('.profile');
+  // timeout for scroll
+  let scrollIntervalTimer;
 
-$(document).ready(function(){
-    $('.menu').on('click', function(){
-        $('ul').toggleClass('active');
-    })
-})
-
-$(".alert-dismissible").fadeTo(2000, 500).slideUp(500, function(){
-    $(".alert-dismissible").alert('close');
-});
-
-$('.slider').slick({
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
+  const startScroll = () => {
+    scrollIntervalTimer = setInterval(() => {
+      const maxScroll = testimonialWrapper.scrollWidth - testimonialWrapper.clientWidth;
+      const distanceFromRight = maxScroll - testimonialWrapper.scrollLeft;
+      if (distanceFromRight <= 0) {
+        testimonialWrapper.scrollTo({ left: 0, behavior: 'smooth' });
+        return;
       }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
+      const nextItemIndex = Math.floor(testimonialWrapper.scrollLeft / (SCROLL_CONTENT_WIDTH + CONTENT_GAP)) + 1;
+      testimonialWrapper.scrollTo({
+        left: [...testimonials][nextItemIndex].offsetLeft - testimonialWrapper.offsetLeft - CONTENT_PADDING,
+        behavior: 'smooth',
+      });
+    }, 3000);
+  };
 
-window.sr = ScrollReveal({ duration: 1000 });
-sr.reveal('.hero-text-container');
-sr.reveal('.rectangle-image');
-sr.reveal('.about-first');
-sr.reveal('.about-second');
-sr.reveal('.about-third');
-sr.reveal('.services-inner');
-sr.reveal('.profile');
-sr.reveal('.contact-us');
+  testimonialWrapper.addEventListener('scroll', () => {
+    const scrollLeft = testimonialWrapper.scrollLeft;
+    const scrollWidth = testimonialWrapper.scrollWidth;
+    const maxScroll = scrollWidth - testimonialWrapper.clientWidth;
+
+    testimonialWrapper.classList.toggle('left-shadow', scrollLeft > 0);
+    testimonialWrapper.classList.toggle('right-shadow', scrollLeft < maxScroll);
+  });
+
+  testimonialWrapper.addEventListener('mouseenter', () => {
+    clearInterval(scrollIntervalTimer);
+  });
+
+  testimonialWrapper.addEventListener('mouseleave', () => {
+    startScroll();
+  });
+
+  window.addEventListener('load', () => {
+    startScroll();
+  });
+};
+
+startScroller();

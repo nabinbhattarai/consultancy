@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
+from .testimonials import testimonials
+
 # Create your views here.
 def home(request):
-    return render(request,'main/home.html')
+    return render(request,'main/home.html', {'testimonials': testimonials})
 
 def about(request):
     return render(request,'main/about.html')
