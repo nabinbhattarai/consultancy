@@ -34,11 +34,11 @@ const startScroller = () => {
     testimonialWrapper.classList.toggle('right-shadow', scrollLeft < maxScroll);
   });
 
-  testimonialWrapper.addEventListener('mouseenter', () => {
+  testimonialWrapper.addEventListener('pointerenter', () => {
     clearInterval(scrollIntervalTimer);
   });
 
-  testimonialWrapper.addEventListener('mouseleave', () => {
+  testimonialWrapper.addEventListener('pointerleave', () => {
     startScroll();
   });
 
@@ -47,4 +47,38 @@ const startScroller = () => {
   });
 };
 
+const navigatorToggle = () => {
+  const navbarToggle = document.querySelector('.toggle i');
+
+  navbarToggle.addEventListener('click', () => {
+    const navbar = document.querySelector('.navbar-list');
+    navbar.classList.toggle('active');
+  });
+};
+
+const startImageCarousel = () => {
+  // set to 0 to start from second item at index 1
+  // why? Because we always show the first item at index 0, incase javascript load is delayed
+  let myIndex = 0;
+  const carousel = () => {
+    let carouselItems = [...document.querySelectorAll('.slide-item')];
+
+    if (myIndex >= carouselItems.length - 1) {
+      // set to -1 to restart from first item at index 0
+      myIndex = -1;
+    }
+    myIndex++;
+
+    const itemToShow = carouselItems.splice(myIndex, 1).pop();
+    itemToShow.classList.toggle('hide');
+    carouselItems.forEach((item) => {
+      item.classList.add('hide');
+    });
+  };
+
+  setInterval(carousel, 2000);
+};
+
 startScroller();
+navigatorToggle();
+startImageCarousel();
