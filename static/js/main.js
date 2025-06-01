@@ -79,6 +79,26 @@ const startImageCarousel = () => {
   setInterval(carousel, 2000);
 };
 
+function formatNepalPhone(input) {
+  let digits = input.value.replace(/\D/g, '').substring(0, 10);
+  if (digits.length > 3) {
+    input.value = digits.substring(0, 3) + '-' + digits.substring(3);
+  } else {
+    input.value = digits;
+  }
+}
+
+function validatePhone() {
+  const phoneInput = document.getElementById('phone');
+  const phoneValue = phoneInput.value.replace(/\D/g, '');
+  const isValid = /^98[0-9]{8}$/.test(phoneValue);
+  if (!isValid) {
+    alert('Please enter a valid 10-digit Nepali mobile number starting with 98');
+    return false;
+  }
+  return true;
+}
+
 startScroller();
 navigatorToggle();
 startImageCarousel();

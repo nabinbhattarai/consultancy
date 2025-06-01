@@ -281,9 +281,7 @@
               Studying in the UK can be a great opportunity to gain a
               world-class education and experience a new culture.
             </p>
-            <a href="{% url 'ukcollege' %}" class="btn btn-contact mr-lg-4"
-              ><b> View Colleges</b></a
-            >
+            <a href="{% url 'ukcollege' %}"><b> View Colleges</b></a>
           </div>
         </div>
         <div class="card">
@@ -299,9 +297,7 @@
               Studying in Australia can be a great opportunity to gain a
               high-quality education and experience a new culture
             </p>
-            <a href="{% url 'auscollege' %}" class="btn btn-contact mr-lg-4"
-              ><b> View Colleges</b></a
-            >
+            <a href="{% url 'auscollege' %}"><b> View Colleges</b></a>
           </div>
         </div>
         <div class="card">
@@ -317,9 +313,7 @@
               Studying in Canada can be a great opportunity to gain a
               high-quality education and experience a new culture
             </p>
-            <a href="{% url 'cancollege' %}" class="btn btn-contact mr-lg-4"
-              ><b>View Colleges</b></a
-            >
+            <a href="{% url 'cancollege' %}"><b>View Colleges</b></a>
           </div>
         </div>
         <div class="card">
@@ -335,17 +329,15 @@
               Studying in the USA can be a great opportunity to gain a
               world-class education and experience a new culture.
             </p>
-            <a href="{% url 'uscollege' %}" class="btn btn-contact mr-lg-4"
-              ><b>View Colleges</b></a
-            >
+            <a href="{% url 'uscollege' %}"><b>View Colleges</b></a>
           </div>
         </div>
       </div>
     </div>
 
     <!-- testimonial section -->
-    <div class="title-container" id="testimonial-section">
-      <h1 class="text-center mb-5">Testimonial</h1>
+    <div class="title-container small-height" id="testimonial-section">
+      <h1 class="text-center">Testimonial</h1>
     </div>
     <div class="custom-scroller">
       <div class="testimonials right-shadow">
@@ -365,70 +357,62 @@
 
     <div class="main-wrapper">
       <!-- contact us -->
+      <div class="title-container">
+        <h1>Contact Us</h1>
+      </div>
       <div class="contact-us" id="contact-us">
-        <h1 class="text-center mb-5">Contact Us</h1>
-        <div class="form text-center">
-          <form action="" method="POST" class="myform">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Your Name"
-                    name="name"
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Your Email"
-                    name="email"
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Intrested Country"
-                    name="state"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Your Mobile"
-                    name="mobile"
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Interested College"
-                    name="college"
-                  />
-                </div>
-                <div class="form-group">
-                  <select name="courses" id="" class="form-control">
-                    <option value="null" disabled selected>
-                      Select Passed level
-                    </option>
-                    <option value="b-tech">+2</option>
-                    <option value="b-tech">PCL</option>
-                    <option value="b-tech">Diploma</option>
-                    <option value="pharmacy">Bachelors</option>
-                    <option value="m-tech">Master</option>
-                  </select>
-                </div>
-              </div>
-              <input class="btn btn-submit" type="submit" name="submit" />
-            </div>
-          </form>
+        <form onsubmit="return validateForm()">
+          <!-- Full Name -->
+          <label for="fullname">Full Name</label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            required
+            placeholder="Your name"
+          />
+
+          <!-- Phone Number -->
+          <!-- Phone with +977 prefix -->
+          <label for="phone">Phone Number</label>
+          <div class="phone-wrapper">
+            <div class="prefix">+977</div>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              maxlength="11"
+              placeholder="9XX-XXXXXXX"
+              required
+              oninput="formatNepalPhone(this)"
+            />
+          </div>
+          <div class="hint">Format: 9XX-XXXXXXX (Nepal mobile)</div>
+
+          <!-- Reason -->
+          <label for="reason">Reason</label>
+          <textarea
+            id="reason"
+            name="reason"
+            required
+            placeholder="Your message..."
+          ></textarea>
+
+          <!-- Submit -->
+          <button type="submit">Submit</button>
+        </form>
+        <div class="information-disclaimer">
+          <h3>Why We Ask for Your Information?</h3>
+          <p>
+            We kindly ask for your name, contact number, and a brief reason for
+            reaching out so that we can understand your needs and respond
+            effectively. This information helps us provide the right support and
+            connect with you directly—without any cost or obligation on your
+            part. Rest assured, your details are kept strictly confidential and
+            are never shared, sold, or misused. Our goal is simply to offer
+            helpful guidance if you're interested, and we respect your privacy
+            every step of the way.
+          </p>
         </div>
       </div>
     </div>
