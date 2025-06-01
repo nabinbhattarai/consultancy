@@ -47,6 +47,19 @@ li {
   color: inherit; /* Force them to inherit from body/html */
 }
 
+a {
+  display: block;
+  width: min-content;
+  white-space: nowrap;
+  color: var(--surface);
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--support-green);
+  }
+}
+
 .slide-item {
   display: block;
 
@@ -158,15 +171,6 @@ li {
 
       .nav-link {
         padding: 6px;
-        color: inherit;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-        &:hover {
-          text-decoration: none;
-        }
       }
     }
   }
@@ -189,16 +193,11 @@ li {
   }
 
   a {
-    color: var(--background);
     border-color: var(--background);
 
     &.btn-contact {
       background-color: var(--primaryContainer);
-      color: var(--background);
       border: none;
-      &:hover {
-        color: unset;
-      }
     }
   }
 }
@@ -254,8 +253,8 @@ li {
 }
 
 .about-us-item {
-  background-color: var(--primaryContainer);
-  color: var(--onPrimaryContainer);
+  background-color: var(--primary);
+  color: var(--onPrimary);
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 16px var(--outline);
@@ -268,14 +267,15 @@ li {
 
   h4 {
     padding: 10px;
+    width: min-content;
+    white-space: nowrap;
 
     &::after {
       content: "";
       background: var(--support-green);
       display: block;
       height: 5px;
-      width: 200px;
-      margin: 10px auto 0;
+      margin-top: 10px;
     }
   }
 
@@ -304,8 +304,8 @@ li {
   gap: 50px;
 
   .processes-item {
-    background-color: var(--primaryContainer);
-    color: var(--onPrimaryContainer);
+    background-color: var(--primary);
+    color: var(--onPrimary);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 16px var(--outline);
@@ -318,11 +318,14 @@ li {
 
     h4 {
       width: min-content;
+      white-space: nowrap;
+
       &::after {
         content: "";
         background: var(--support-green);
         display: block;
         height: 5px;
+        margin-top: 10px;
       }
     }
   }
@@ -348,12 +351,13 @@ li {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      background-color: var(--onPrimaryContainer);
+      background-color: var(--primary);
     }
   }
 
   .card-body {
-    color: var(--onPrimaryContainer);
+    background-color: var(--primary);
+    color: var(--onPrimary);
     border-radius: 0 0 10px 10px;
   }
 }
@@ -456,82 +460,52 @@ li {
   }
 }
 
-.apply {
-  color: var(--support-green) !important;
-}
-.card-body {
-  background-color: #241c60;
-  color: var(--onBackground);
-}
-.card-body h5 {
-  color: hotpink;
-}
-.card-body a {
-  color: var(--support-green);
-}
-.card-body a:hover {
-  text-decoration: none;
-}
-/* testimonial section */
-.testimonial-section {
-  padding: 5px 80px 65px 80px;
-}
-.testimonial-section h1::after {
-  content: "";
-  background: var(--support-green);
-  display: block;
-  height: 4px;
-  width: 170px;
-  margin: 20px auto 10px;
-}
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--onSurface);
+  color: var(--surface);
+  padding: 32px;
 
-/* contact us */
-.contact-us h1::after {
-  content: "";
-  background: var(--support-green);
-  display: block;
-  height: 4px;
-  width: 170px;
-  margin: 20px auto 10px;
-}
-.contact-us {
-  padding: 5px 80px 65px 80px;
-}
-.form-control {
-  border: none;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  padding: 8px 12px;
-}
-.btn-submit {
-  background-color: var(--support-green);
-  border: none;
-  font-weight: 400;
-  color: var(--onBackground);
-  border-radius: 8px;
-  padding: 6px 12px;
-  display: inline-block;
-  width: 200px;
-  margin: 15px auto;
-  /* text-align: center; */
-  border: 1px solid var(--support-green);
-}
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none !important;
-}
+  .location {
+    width: 100%;
+    height: auto;
+    border: 0;
+    border-radius: 20px;
+  }
 
-/* footer  */
-.footer-nav li {
-  list-style-type: none;
-}
-.footer-nav li a {
-  text-decoration: none;
-  color: var(--onBackground);
-}
-.footer-links a {
-  text-decoration: none;
-  color: var(--onBackground);
+  .copyright {
+    font-size: 12px;
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 12px;
+
+    .social-icons {
+      display: flex;
+      gap: 24px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    span {
+      padding-left: 12px;
+    }
+  }
 }
 
 @keyframes slideIn {
@@ -544,6 +518,12 @@ select:focus {
 }
 
 @media only screen and (max-width: 850px) {
+  footer {
+    .footer-container {
+      grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
+  }
+
   .mobile-nav {
     width: min-content;
 
@@ -584,111 +564,10 @@ select:focus {
   .slides {
     display: none;
   }
-  .about-inner {
-    padding: 15px;
-  }
-  .what-heading {
-    font-size: 22px;
-  }
-  .what-subheading {
-    font-size: 18px;
-  }
-  .border-custom {
-    width: 200px;
-    line-height: 45px;
-  }
-  .about-heading {
-    font-size: 20px;
-  }
-  .about-first ul li {
-    font-size: 16px;
-  }
-  .about-second ul li {
-    font-size: 16px;
-  }
 }
 
 @media only screen and (max-width: 425px) {
   .slides {
-    display: none;
-  }
-
-  .hero-text-container {
-    padding: 25px;
-  }
-  .hero-text-container h1 {
-    padding-top: 40px;
-    font-size: 27px;
-  }
-  .hero-text-container p {
-    font-size: 14px;
-  }
-  .btn-contact {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .rectangle-image {
-    display: none !important;
-  }
-  /* about container */
-  .process-heading {
-    font-size: 27px;
-  }
-  .border-services {
-    max-width: 200px;
-    line-height: 65px;
-  }
-  /* college */
-  .our-college {
-    padding: 0 29px 35px 30px;
-  }
-  .our-college h1::after {
-    height: 3px;
-    width: 90px;
-    margin: 10px auto 10px;
-  }
-  .our-college h1 {
-    font-size: 27px;
-  }
-  .card-text {
-    font-size: 14px;
-  }
-  /* testimonial */
-  .testimonial-section {
-    padding: 0 12px 20px 12px;
-  }
-  .testimonial-section h1 {
-    font-size: 27px;
-  }
-  .testimonial-section blockquote {
-    font-size: 14px;
-  }
-  .testimonial-section h1::after {
-    height: 3px;
-    width: 90px;
-    margin: 10px auto 10px;
-  }
-  /* contact */
-  .contact-us {
-    padding: 0 12px 20px 12px;
-  }
-  .contact-us h1 {
-    font-size: 27px;
-  }
-  .contact-us h1::after {
-    height: 3px;
-    width: 90px;
-    margin: 10px auto 10px;
-  }
-  .btn-submit {
-    width: 100%;
-    margin: 15px;
-  }
-  .footer-nav {
-    display: none;
-  }
-  .footer-about {
     display: none;
   }
 }
