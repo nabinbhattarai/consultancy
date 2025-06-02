@@ -537,6 +537,10 @@ footer {
   }
 }
 
+.section {
+  scroll-margin-top: 80px;
+}
+
 @keyframes slideIn {
   from {
     right: -160px;
