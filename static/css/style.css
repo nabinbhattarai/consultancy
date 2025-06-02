@@ -494,6 +494,7 @@ footer {
     .social-icons {
       display: flex;
       gap: 24px;
+      align-self: center;
 
       svg {
         width: 24px;
