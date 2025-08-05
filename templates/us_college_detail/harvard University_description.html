@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harvard University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/college_detail.css' %}">
+</head>
+<body>
+
+<div class="banner">
+    <div class="overlay">
+        <div class="info">
+            <div class="ranking-badge">🏆 World Ranking #1</div>
+            <h1>Harvard University</h1>
+            <p>📍 Cambridge, Massachusetts, United States</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Row: About & Quick Info -->
+    <div class="row">
+        <div class="card about">
+            <h2>📘 About Harvard University</h2>
+            <p>Harvard University is a private Ivy League research university in Cambridge, Massachusetts. 
+               Founded in 1636, Harvard is the oldest institution of higher education in the United States 
+               and one of the most prestigious universities worldwide.</p>
+        </div>
+        <div class="card quick-info">
+            <h3>Quick Information</h3>
+            <ul>
+                <li><strong>World Ranking:</strong> <span class="badge">#1</span></li>
+                <li><strong>Tuition Fee:</strong> <span class="fee">$57,246 per year</span></li>
+                <li><strong>Application Deadline:</strong> <span>January 1, 2025</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Row: Programs & Admission -->
+    <div class="row">
+        <div class="card programs">
+            <h2>🎓 Academic Programs</h2>
+            <div class="tags">
+                <span>Business Administration</span>
+                <span>Law</span>
+                <span>Computer Science</span>
+                <span>Medicine</span>
+                <span>Engineering</span>
+                <span>Liberal Arts</span>
+            </div>
+        </div>
+        <div class="card admission">
+            <h2>📋 Admission Requirements</h2>
+            <ul>
+                <li><strong>Minimum GPA:</strong> 3.9+</li>
+                <li><strong>English Proficiency:</strong> IELTS 7.5+ or TOEFL 100+</li>
+                <li><strong>SAT Score:</strong> 1500+</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Campus Life -->
+    <div class="row">
+        <div class="card full campus">
+            <h2>🏫 Campus Life</h2>
+            <p>Harvard offers a vibrant campus life with over 400 student organizations, world-class libraries, and historic architecture. 
+                Students enjoy access to cutting-edge research facilities and a global alumni network.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

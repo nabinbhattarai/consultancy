@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University of Adelaide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/college_detail.css' %}">
+</head>
+<body>
+
+<div class="banner">
+    <div class="overlay">
+        <div class="info">
+            <div class="ranking-badge">🏆 World Ranking #8</div>
+            <h1>University of Adelaide</h1>
+            <p>📍 Adelaide, Australia</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Row: About & Quick Info -->
+    <div class="row">
+        <div class="card about">
+            <h2>📘 About University of Adelaide</h2>
+            <p>Campus life at the University of Adelaide blends rich history, modern learning facilities, and an active social scene right in the heart of Adelaide’s city centre. The North Terrace campus features stunning Gothic‐revival architecture like Bonython Hall and the Barr Smith Library, alongside contemporary study spaces, cafés, and green lawns where students gather. More than 175 student‑run clubs and societies span interests from culture and academics to sports and social causes, supported by a dynamic student union. The university fields approximately 37 sports clubs—rowing, cricket, basketball and more—through Adelaide University Sport, offering fitness facilities, competitions, and events. Annual traditions like Prosh Week add fun and charity spirit, with satirical parades and campus celebrations.
+
+International students find strong peer support through clubs, conversation groups, and city tours that help build community and confidence. Many students live in on-campus housing or apartment villages that are lively hubs of activity and friendship.</p>
+        </div>
+        <div class="card quick-info">
+            <h3>Quick Information</h3>
+            <ul>
+                <li><strong>World Ranking:</strong> <span class="badge">#8</span></li>
+                <li><strong>Tuition Fee:</strong> <span class="fee">$57,246 per year</span></li>
+                <li><strong>Application Deadline:</strong> <span>January 1, 2025</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Row: Programs & Admission -->
+    <div class="row">
+        <div class="card programs">
+            <h2>🎓 Academic Programs</h2>
+            <div class="tags">
+                <span>Business Administration</span>
+                <span>Law</span>
+                <span>Computer Science</span>
+                <span>Medicine</span>
+                <span>Engineering</span>
+                <span>Liberal Arts</span>
+            </div>
+        </div>
+        <div class="card admission">
+            <h2>📋 Admission Requirements</h2>
+            <ul>
+                <li><strong>Minimum GPA:</strong> 3.9+</li>
+                <li><strong>English Proficiency:</strong> IELTS 7.5+ or TOEFL 100+</li>
+                <li><strong>SAT Score:</strong> 1500+</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Campus Life -->
+    <div class="row">
+        <div class="card full campus">
+            <h2>🏫 Campus Life</h2>
+            <p>Campus life at the University of Adelaide is vibrant, diverse, and full of opportunities for students to engage both academically and socially. The main North Terrace campus, located in the heart of Adelaide’s city centre, combines beautiful historic sandstone buildings with modern learning spaces, green lawns, cafés, and wellness areas. Its central location gives students easy access to the city’s cultural attractions, shopping districts, and entertainment venues, as well as free tram services.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

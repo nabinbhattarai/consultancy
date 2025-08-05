@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University of Sydney</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/college_detail.css' %}">
+</head>
+<body>
+
+<div class="banner">
+    <div class="overlay">
+        <div class="info">
+            <div class="ranking-badge">🏆 World Ranking #</div>
+            <h1>University of Sydney</h1>
+            <p>📍 Sydney, Australia</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Row: About & Quick Info -->
+    <div class="row">
+        <div class="card about">
+            <h2>📘 About University of Sydney</h2>
+            <p>The University of Sydney (USyd), founded in 1850, is Australia’s first university and a leading global institution known for academic excellence, innovative research, and a vibrant student community. Located in the heart of Sydney, its main Camperdown/Darlington campus spans 72 hectares and features a stunning blend of historic sandstone buildings, such as the iconic Quadrangle and Great Hall, alongside modern facilities, libraries, research centers, and green spaces.
+
+The university offers a wide range of undergraduate and postgraduate programs across diverse disciplines, supported by world-class faculty and cutting-edge resources. It consistently ranks among the top universities worldwide, attracting students from across the globe. USyd fosters a strong focus on research, creativity, and real-world impact, preparing graduates for leadership in their fields. With its rich heritage, diverse community, and location in one of the world’s most dynamic cities, the University of Sydney continues to shape the future of education, research, and innovation.
+</p>
+        </div>
+        <div class="card quick-info">
+            <h3>Quick Information</h3>
+            <ul>
+                <li><strong>World Ranking:</strong> <span class="badge">#2</span></li>
+                <li><strong>Tuition Fee:</strong> <span class="fee">A$43,000 per year</span></li>
+                <li><strong>Application Deadline:</strong> <span>January 1, 2025</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Row: Programs & Admission -->
+    <div class="row">
+        <div class="card programs">
+            <h2>🎓 Academic Programs</h2>
+            <div class="tags">
+               
+                <span>Law</span>
+               
+                <span>Medicine</span>
+                <span>Humanities</span>
+                <span>Econimics</span>
+            </div>
+        </div>
+        <div class="card admission">
+            <h2>📋 Admission Requirements</h2>
+            <ul>
+                <li><strong>Minimum GPA:</strong> 3.9+</li>
+                <li><strong>English Proficiency:</strong> IELTS 7.5+ or TOEFL 100+</li>
+                <li><strong>SAT Score:</strong> 1500+</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Campus Life -->
+    <div class="row">
+        <div class="card full campus">
+            <h2>🏫 Campus Life</h2>
+            <p>Campus life at the University of Sydney is vibrant, diverse, and full of opportunities for personal and professional growth. The campus blends historic sandstone buildings with modern facilities, creating an inspiring environment for study and social interaction. Students can participate in over 200 clubs and societies, catering to interests in culture, arts, sports, academics, and special hobbies, ensuring there is something for everyone.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

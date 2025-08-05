@@ -60,6 +60,8 @@
           <img class="slide-item" src="{% static 'images/study.jpg' %}" />
           <img class="slide-item hide" src="{% static 'images/study1.jpg' %}" />
           <img class="slide-item hide" src="{% static 'images/study2.jpg' %}" />
+           <img class="slide-item hide" src="{% static 'images/randomimg.jpg' %}" />
+
         </div>
       </div>
     </div>
@@ -115,32 +117,7 @@
               </svg>
               <span> PTE </span>
             </li>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m5 16.577 2.194-2.195 5.486 5.484L24.804 7.743 27 9.937l-14.32 14.32z"
-                />
-              </svg>
-              <span> TOFEL </span>
-            </li>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m5 16.577 2.194-2.195 5.486 5.484L24.804 7.743 27 9.937l-14.32 14.32z"
-                />
-              </svg>
-              <span>GRE</span>
-            </li>
+          
           </ul>
         </div>
 
@@ -275,7 +252,9 @@
           />
           <div class="card-body">
             <h3 class="card-title">
-              <b> UNITED KINGDOM</b>
+              <b><a href="{% url 'ukcollege' %}" style="all: unset; cursor: pointer;">
+          UNITED KINGDOM
+        </a></b>
             </h3>
             <p class="card-text">
               Studying in the UK can be a great opportunity to gain a
@@ -292,7 +271,9 @@
             alt=""
           />
           <div class="card-body">
-            <h3 class="card-title"><b>AUSTRALIA</b></h3>
+            <h3 class="card-title"><b><a href="{% url 'auscollege' %}" style="all: unset; cursor: pointer;">
+          AUSTRALIA
+        </a></b></h3>
             <p class="card-text">
               Studying in Australia can be a great opportunity to gain a
               high-quality education and experience a new culture
@@ -308,7 +289,9 @@
             alt=""
           />
           <div class="card-body">
-            <h3 class="card-title"><b>CANADA</b></h3>
+            <h3 class="card-title"><b><a href="{% url 'cancollege' %}" style="all: unset; cursor: pointer;">
+          CANADA
+        </a></b></h3>
             <p class="card-text">
               Studying in Canada can be a great opportunity to gain a
               high-quality education and experience a new culture
@@ -324,7 +307,9 @@
             alt=""
           />
           <div class="card-body">
-            <h3 class="card-title"><b> USA </b></h3>
+            <h3 class="card-title"><b><a href="{% url 'uscollege' %}" style="all: unset; cursor: pointer;">
+          USA
+        </a></b></h3>
             <p class="card-text">
               Studying in the USA can be a great opportunity to gain a
               world-class education and experience a new culture.
@@ -391,7 +376,7 @@
         <div class="footer-about">
           <div>
             <p>
-              Venue Education is the leading education consultancy in Nepal.
+              Venue Education is the leading education consultancy in Nepal. Founded in 2023, the Venue Education Consultancy is committed to helping Nepalese students fulfill their dreams of attending Global universities. We are a licensed educational consultancy in Nepal with a staff of seasoned experts who are knowledgeable about admissions and academic policies in different countries. Our goal is to make sure that students have a smooth transition to studying in global universities by helping them choose the best program and university for their needs in terms of professional goals, academic standing, English language skills, and financial resources.
             </p>
           </div>
         </div>
@@ -407,8 +392,10 @@
             <span>venueedu1@gmail.com</span>
           </a>
           <a href="tel:+977015913493">
+            
             <i class="fa fa-phone" aria-hidden="true"></i>
-            <span>+977 01-5913493</span>
+            <span>+977 01-5913493 / 9862657171/ 9866545548</span>
+            </a>
           </a>
           <p>
             <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -422,7 +409,10 @@
           <a href="https://www.instagram.com/venueedu/"
             ><i class="fa fa-instagram fa-lg" aria-hidden="true"></i
           ></a>
-          <a href="https://www.instagram.com/venueedu/"
+          <a href="https://www.linkedin.com/in/venue-education-consultancy-2009a5276"
+            ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+          ></a>
+          <a href="https://www.tiktok.com/@venueeducation?_t=ZS-8yarZBYHUH2&_r=1"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
