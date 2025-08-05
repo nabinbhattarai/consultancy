@@ -38,7 +38,7 @@ jobs:
       - name: Build static site with django-distill
         run: |
           source venv/bin/activate
-          python manage.py distill-local build
+          python manage.py distill-local build --force
 
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
