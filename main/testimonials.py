@@ -11,10 +11,10 @@ testimonials = [
             """,
     },
     {
-        "name": "Prem Kumar Bista",
-        "college": "Birendra Namuna College",
-        "address": "Chandragadi, Jhapa",
-        "image": "images/prem.jpg",
+        "name": "Merina Chaudhary",
+        "college": "Hetuda School of Management Secondary School",
+        "address": "Huprachaur, Hetuda",
+        "image": "images/merina.jpg",
         "comment": """
             I was properly guided and the entire process was hassle free. My
             sincere gratitude to <b>Venue Education Consultancy</b> for making
@@ -22,10 +22,10 @@ testimonials = [
             """,
     },
     {
-        "name": "Saurav Bhattarai",
-        "college": "KIST college",
+        "name": "Sabin Sheresta",
+        "college": "Shankarapur Academy",
         "address": "Kathmandu",
-        "image": "images/saurav.jpg",
+        "image": "images/sabin.jpg",
         "comment": """
             I was very confused after XII. Not knowing where to take admission,
             then <b>Venue Education Consultancy</b> help me to select the best
@@ -33,12 +33,12 @@ testimonials = [
             """,
     },
     {
-        "name": "Gaurav Bhattarai",
-        "college": "Merryland college",
-        "address": "Biratnagar",
-        "image": "images/gaurav.jpg",
+        "name": "Sita Ram Oli",
+        "college": "Eastern Region campus",
+        "address": "Dharan",
+        "image": "images/sitaram.jpg",
         "comment": """
-            Becoming a Doctor is my dream but fees was beyond my reach. But
+            Becoming an Engineer is my dream but fees was beyond my reach. But
             <b>Venue Education Consultancy</b>, gave me options where I could
             enroll myself without worry.
             """,

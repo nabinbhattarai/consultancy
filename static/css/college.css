@@ -1,0 +1,184 @@
+/* Font and Reset */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.our-college {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #f0f2f5;
+    /* padding: 30px 0 10px; */
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Heading Section */
+.our-college h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    color: #1c1c1c;
+}
+
+.our-college h1::after {
+    content: "";
+    height: 3px;
+    width: 80px;
+    background: #43CEA2;
+    display: block;
+    margin: 10px auto 0;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Card Styling */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Card Content */
+.card-body {
+    background-color: #241C60;
+    color: #fff;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Title */
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF6B6B;
+    margin-bottom: 12px;
+}
+
+/* Description */
+.card-text {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn-contact {
+    display: inline-block;
+    background-color: #43CEA2;
+    color: #fff;
+    text-align: center;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #35b18b;
+    text-decoration: none;
+}
+
+/* Rank badge */
+.card-rank {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: #fff;
+    color: #1c1c1c;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Update card-body for layout */
+.card-body {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Location */
+.card-location {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.card-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Tags */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.card-tags span {
+    background-color: #f0f2f5;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Footer with tuition + button */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.tuition-fee {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+}

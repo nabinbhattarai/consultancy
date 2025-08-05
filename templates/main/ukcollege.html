@@ -1,155 +1,203 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            college list
-        </title>
-        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
-        <link rel="stylesheet" href="{% static 'css/slick.css' %}">
-        <link rel='stylesheet' href="{% static 'css/style.css' %}">
-        <style>
-            .card{
-                width: 270px !important;
-                float: right;
-                margin-top: 15px;
-                border-radius: 5px;
-  
-            }
-            .our-college{
-                padding: 5px 55px 65px 55px;
-                margin-top: 10px;
-                margin-bottom: 10px;
-               
-            }
-            .our-college h1::after{
-                content: "";
-                background: #43CEA2;
-                display: block;
-                height: 4px;
-                width: 170px;
-                margin: 20px auto 10px;
-            }
-            .apply{
-                color: #43CEA2 !important;
-            }
-            .card-body{
-                background-color: #241C60;
-                color: #fff;
-            }
-            .card-body a{
-                color: #43CEA2;
-            }
-            .card-body a:hover{
-                text-decoration: none;
-            }
-            .btn-contact{
-                background-color:darkblue;
-                border: none;
-                font-weight: 400;
-                color:white;
-                border-radius: 8px;
-                padding: 8px 18px;
-                border: 1px solid black;
-                }
-                @media only screen and (max-width:425px){
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top UK Colleges</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/college.css' %}">
+</head>
+<body>
 
-                    .our-college{
-                        padding: 0 29px 35px 30px;
-                    }
-                    .our-college h1::after{
-                        height: 3px;
-                        width: 90px;
-                        margin: 10px auto 10px;
-                    }
-                    .our-college h1{
-                        font-size: 27px;;
-                    }
-                    .card-text{
-                        font-size: 14px;
-                    }
-                }
+<div class="container">
+    <div class="our-college">
+        <h1>Top Colleges in the United Kingdom</h1>
+    </div>
 
-        </style>
-
-    </head>
-    <body>
-        <div class="container-fluid">
-            <div class="our-college" id="our-college">
-                <h1 class="text-center mb-5 ">Best College in United Kingdom</h1>
-                <div class="slider slider-area" >
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/Oxford.jpg' %}"class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> Oxford University</b></h5>
-                            <p class="card-text">Studying in the UK can be a great opportunity to gain a world-class education and experience a new culture. </p>
-                            <a href="{% url 'ukcollege' %}" class="btn btn-contact mr-lg-4"><b> View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/cam.jpg' %}" class="card-img-top" height="170"  alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b>Cambridge University</b></h5>
-                            <p class="card-text">Studying in Australia can be a great opportunity to gain a high-quality education and experience a new culture</p>
-                            <a href="{% url 'auscollege' %}"class="btn btn-contact mr-lg-4"><b> View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/man.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b>Manchester University</b></h5>
-                            <p class="card-text">Studying in Canada can be a great opportunity to gain a high-quality education and experience a new culture</p>
-                            <a href="{% url 'cancollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/lon.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> University of London </b></h5>
-                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
-                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/che.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> Chelsea University </b></h5>
-                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
-                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/imp.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> Imperial College London </b></h5>
-                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
-                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/bir.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> University of Birmingham </b></h5>
-                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
-                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/edi.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> The University of Edinburgh </b></h5>
-                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
-                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+    <div class="grid">
+        <!-- Oxford -->
+<div class="card">
+    <img src="{% static 'images/Oxford.jpg' %}" alt="University of Oxford">
+    <div class="card-body">
+        <div class="card-rank">#1</div>
+        <div class="card-title">University of Oxford</div>
+        <div class="card-location">📍 Oxford, United Kingdom</div>
+        <div class="card-text">The University of Oxford is the oldest English-speaking university, known globally for academic excellence and historic legacy.</div>
+        <div class="card-tags">
+            <span>Philosophy</span><span>Politics</span><span>Economics</span><span>Medicine</span>
         </div>
+        <div class="card-footer">
+            <div class="tuition-fee">£32,760 per year</div>
+            <a href="{% url 'uk_uoxford_detail'%}" class="btn-contact">View Details</a>
+        </div>
+    </div>
+</div>
 
-    </body>
+<!-- Cambridge -->
+<div class="card">
+    <img src="{% static 'images/cam.jpg' %}" alt="University of Cambridge">
+    <div class="card-body">
+        <div class="card-rank">#2</div>
+        <div class="card-title">University of Cambridge</div>
+        <div class="card-location">📍 Cambridge, United Kingdom</div>
+        <div class="card-text">A globally recognized institution, Cambridge offers rigorous academics and a historic environment for learning.</div>
+        <div class="card-tags">
+            <span>Natural Sciences</span><span>Engineering</span><span>Law</span><span>Mathematics</span>
+        </div>
+        <div class="card-footer">
+            <div class="tuition-fee">£33,825 per year</div>
+            <a href="{% url 'uk_cambridge_university_detail'%}" class="btn-contact">View Details</a>
+        </div>
+    </div>
+</div>
+
+<!-- Imperial College London -->
+<div class="card">
+    <img src="{% static 'images/imp.jpg' %}" alt="Imperial College London">
+    <div class="card-body">
+        <div class="card-rank">#3</div>
+        <div class="card-title">Imperial College London</div>
+        <div class="card-location">📍 London, United Kingdom</div>
+        <div class="card-text">Specialized in science, engineering, and medicine, Imperial is a top STEM-focused institution in the UK.</div>
+        <div class="card-tags">
+            <span>Engineering</span><span>Computer Science</span><span>Medicine</span><span>Physics</span>
+        </div>
+        <div class="card-footer">
+            <div class="tuition-fee">£35,100 per year</div>
+            <a href="{% url 'uk_ic_london_detail'%}" class="btn-contact">View Details</a>
+        </div>
+    </div>
+</div>
+
+<!-- UCL -->
+<div class="card">
+    <img src="{% static 'images/ucl.jpeg' %}" alt="University College London">
+    <div class="card-body">
+        <div class="card-rank">#4</div>
+        <div class="card-title">University College London (UCL)</div>
+        <div class="card-location">📍 London, United Kingdom</div>
+        <div class="card-text">UCL is a leading multidisciplinary university, known for progressive teaching and research excellence.</div>
+        <div class="card-tags">
+            <span>Law</span><span>Architecture</span><span>Social Sciences</span><span>Medicine</span>
+        </div>
+        <div class="card-footer">
+            <div class="tuition-fee">£31,200 per year</div>
+            <a href="{% url 'uk_ucl_detail'%}" class="btn-contact">View Details</a>
+        </div>
+    </div>
+</div>
+
+<!-- University of Edinburgh -->
+<div class="card">
+    <img src="{% static 'images/edi.jpg' %}" alt="University of Edinburgh">
+    <div class="card-body">
+        <div class="card-rank">#5</div>
+        <div class="card-title">University of Edinburgh</div>
+        <div class="card-location">📍 Edinburgh, Scotland</div>
+        <div class="card-text">One of the most prestigious universities in the UK, with strong programs in humanities, AI, and health sciences.</div>
+        <div class="card-tags">
+            <span>AI</span><span>History</span><span>Medicine</span><span>Philosophy</span>
+        </div>
+        <div class="card-footer">
+            <div class="tuition-fee">£28,950 per year</div>
+            <a href="{% url 'uk_university_of_edienburgh_detail'%}" class="btn-contact">View Details</a>
+        </div>
+    </div>
+</div>
+
+<!-- Manchester -->
+<div class="card">
+    <img src="{% static 'images/man.jpg' %}" alt="University of Manchester">
+    <div class="card-body">
+        <div class="card-rank">#6</div>
+        <div class="card-title">University of Manchester</div>
+        <div class="card-location">📍 Manchester, United Kingdom</div>
+        <div class="card-text">Manchester is a member of the Russell Group and is well-known for science, engineering, and business studies.</div>
+        <div class="card-tags">
+            <span>Engineering</span><span>Business</span><span>Physics</span><span>Economics</span>
+        </div>
+        <div class="card-footer">
+            <div class="tuition-fee">£27,000 per year</div>
+            <a href="{% url 'uk_umanchester_detail'%}" class="btn-contact">View Details</a>
+        </div>
+    </div>
+</div>
+
+<!-- King's College London -->
+<div class="card">
+    <img src="{% static 'images/kings.jpeg' %}" alt="King's College London">
+    <div class="card-body">
+        <div class="card-rank">#7</div>
+        <div class="card-title">King's College London</div>
+        <div class="card-location">📍 London, United Kingdom</div>
+        <div class="card-text">King’s has a strong reputation in health sciences, law, humanities, and international affairs.</div>
+        <div class="card-tags">
+            <span>Law</span><span>Medicine</span><span>History</span><span>Politics</span>
+        </div>
+        <div class="card-footer">
+            <div class="tuition-fee">£29,500 per year</div>
+            <a href="{% url 'uk_kcl_details'%}" class="btn-contact">View Details</a>
+        </div>
+    </div>
+</div>
+
+<!-- LSE -->
+<div class="card">
+    <img src="{% static 'images/Lse.jpg' %}" alt="London School of Economics">
+    <div class="card-body">
+        <div class="card-rank">#8</div>
+        <div class="card-title">London School of Economics (LSE)</div>
+        <div class="card-location">📍 London, United Kingdom</div>
+        <div class="card-text">A global leader in economics, political science, sociology, and law education.</div>
+        <div class="card-tags">
+            <span>Economics</span><span>Politics</span><span>Sociology</span><span>Finance</span>
+        </div>
+        <div class="card-footer">
+            <div class="tuition-fee">£30,960 per year</div>
+            <a href="{% url 'uk_lsc_details'%}" class="btn-contact">View Details</a>
+        </div>
+    </div>
+</div>
+
+<!-- University of Bristol -->
+<div class="card">
+    <img src="{% static 'images/bristol.jpeg' %}" alt="University of Bristol">
+    <div class="card-body">
+        <div class="card-rank">#9</div>
+        <div class="card-title">University of Bristol</div>
+        <div class="card-location">📍 Bristol, United Kingdom</div>
+        <div class="card-text">Known for research and academic excellence, particularly in engineering, health, and law.</div>
+        <div class="card-tags">
+            <span>Engineering</span><span>Law</span><span>Biological Sciences</span><span>Psychology</span>
+        </div>
+        <div class="card-footer">
+            <div class="tuition-fee">£26,900 per year</div>
+            <a href="{% url 'uk_university_of_bristol_detail'%}" class="btn-contact">View Details</a>
+        </div>
+    </div>
+</div>
+
+<!-- University of Warwick -->
+<div class="card">
+    <img src="{% static 'images/warwick.jpeg' %}" alt="University of Warwick">
+    <div class="card-body">
+        <div class="card-rank">#10</div>
+        <div class="card-title">University of Warwick</div>
+        <div class="card-location">📍 Coventry, United Kingdom</div>
+        <div class="card-text">Warwick excels in business, economics, mathematics, and computer science education.</div>
+        <div class="card-tags">
+            <span>Business</span>
+            <span>Economics</span>
+        <div class="card-footer">
+            <div class="tuition-fee">£26,900 per year</div>
+            <a href="{% url 'uk_university_of_warwick_detail'%}" class="btn-contact">View Details</a>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+</body>
 </html>

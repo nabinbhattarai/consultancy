@@ -1,152 +1,202 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            college list
-        </title>
-        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
-        <link rel="stylesheet" href="{% static 'css/slick.css' %}">
-        <link rel='stylesheet' href="{% static 'css/style.css' %}">
-        <style>
-            .card{
-                width: 270px !important;
-                float: right;
-                margin-top: 15px;
-  
-            }
-            .our-college{
-                padding: 5px 55px 65px 55px;
-                margin-top: 10px;
-            }
-            .our-college h1::after{
-                content: "";
-                background: #43CEA2;
-                display: block;
-                height: 4px;
-                width: 170px;
-                margin: 20px auto 10px;
-            }
-            .apply{
-                color: #43CEA2 !important;
-            }
-            .card-body{
-                background-color: #241C60;
-                color: #fff;
-            }
-            .card-body a{
-                color: #43CEA2;
-            }
-            .card-body a:hover{
-                text-decoration: none;
-            }
-            .btn-contact{
-                background-color:darkblue;
-                border: none;
-                font-weight: 400;
-                color:white;
-                border-radius: 8px;
-                padding: 8px 18px;
-                border: 1px solid black;
-                }
-                @media only screen and (max-width:425px){
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Canadian Colleges</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/college.css' %}">
+</head>
+<body>
 
-                    .our-college{
-                        padding: 0 29px 35px 30px;
-                    }
-                    .our-college h1::after{
-                        height: 3px;
-                        width: 90px;
-                        margin: 10px auto 10px;
-                    }
-                    .our-college h1{
-                        font-size: 27px;;
-                    }
-                    .card-text{
-                        font-size: 14px;
-                    }
-                }
+<div class="container">
+    <div class="our-college">
+        <h1>Top Colleges in Canada</h1>
+    </div>
 
-        </style>
-
-    </head>
-    <body>
-        <div class="container-fluid">
-            <div class="our-college" id="our-college">
-                <h1 class="text-center mb-5 ">Best College in Canada</h1>
-                <div class="slider slider-area" >
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/Oxford.jpg' %}"class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> Oxford University</b></h5>
-                            <p class="card-text">Studying in the UK can be a great opportunity to gain a world-class education and experience a new culture. </p>
-                            <a href="{% url 'ukcollege' %}" class="btn btn-contact mr-lg-4"><b> View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/cam.jpg' %}" class="card-img-top" height="170"  alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b>Cambridge University</b></h5>
-                            <p class="card-text">Studying in Australia can be a great opportunity to gain a high-quality education and experience a new culture</p>
-                            <a href="{% url 'auscollege' %}"class="btn btn-contact mr-lg-4"><b> View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/man.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b>Manchester University</b></h5>
-                            <p class="card-text">Studying in Canada can be a great opportunity to gain a high-quality education and experience a new culture</p>
-                            <a href="{% url 'cancollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/lon.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> University of London </b></h5>
-                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
-                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/che.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> Chelsea University </b></h5>
-                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
-                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/imp.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> Imperial College London </b></h5>
-                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
-                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/bir.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> University of Birmingham </b></h5>
-                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
-                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    <div class="card ml-lg-3 ml-5">
-                        <img src="{% static 'images/edi.jpg' %}" class="card-img-top" height="170" alt="">
-                        <div class="card-body">
-                            <h5 style="color: red;" class="card-title"><b> The University of Edinburgh </b></h5>
-                            <p class="card-text">Studying in the USA can be a great opportunity to gain a world-class education and experience a new culture.</p>
-                            <a href="{% url 'uscollege' %}"class="btn btn-contact mr-lg-4"><b>View Details</b></a>
-                        </div>
-                    </div>
-                    
+    <div class="grid">
+        <!-- University of Toronto -->
+        <div class="card">
+            <img src="{% static 'images/toronto.jpeg' %}" alt="University of Toronto">
+            <div class="card-body">
+                <div class="card-rank">#1</div>
+                <div class="card-title">University of Toronto</div>
+                <div class="card-location">📍 Toronto, Canada</div>
+                <div class="card-text">Canada’s top-ranked university, globally recognized for research, innovation, and academic strength.</div>
+                <div class="card-tags">
+                    <span>Computer Science</span><span>Medicine</span><span>Engineering</span><span>Law</span>
+                </div>
+                <div class="card-footer">
+                    <div class="tuition-fee">CA$58,160 per year</div>
+                    <a href="{% url 'can_uot_detail'%}" class="btn-contact">View Details</a>
                 </div>
             </div>
         </div>
 
-    </body>
+        <!-- University of British Columbia -->
+        <div class="card">
+            <img src="{% static 'images/ubc.jpeg' %}" alt="University of British Columbia">
+            <div class="card-body">
+                <div class="card-rank">#2</div>
+                <div class="card-title">University of British Columbia (UBC)</div>
+                <div class="card-location">📍 Vancouver, Canada</div>
+                <div class="card-text">UBC is known for its beautiful campus, cutting-edge research, and strong global reputation.</div>
+                <div class="card-tags">
+                    <span>Forestry</span><span>Engineering</span><span>Arts</span><span>Business</span>
+                </div>
+                <div class="card-footer">
+                    <div class="tuition-fee">CA$54,000 per year</div>
+                    <a href="{% url 'can_ubc_detail'%}" class="btn-contact">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- McGill University -->
+        <div class="card">
+            <img src="{% static 'images/mu.jpeg' %}" alt="McGill University">
+            <div class="card-body">
+                <div class="card-rank">#3</div>
+                <div class="card-title">McGill University</div>
+                <div class="card-location">📍 Montreal, Canada</div>
+                <div class="card-text">Located in Quebec, McGill is known for academic excellence, global diversity, and innovation.</div>
+                <div class="card-tags">
+                    <span>Medicine</span><span>Law</span><span>Arts</span><span>Sciences</span>
+                </div>
+                <div class="card-footer">
+                    <div class="tuition-fee">CA$50,000 per year</div>
+                    <a href="{% url 'can_muu_detail'%}" class="btn-contact">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- University of Alberta -->
+        <div class="card">
+            <img src="{% static 'images/alberta.jpeg' %}" alt="University of Alberta">
+            <div class="card-body">
+                <div class="card-rank">#4</div>
+                <div class="card-title">University of Alberta</div>
+                <div class="card-location">📍 Edmonton, Canada</div>
+                <div class="card-text">Highly respected for its programs in engineering, energy research, and natural sciences.</div>
+                <div class="card-tags">
+                    <span>Engineering</span><span>Energy</span><span>Sciences</span><span>Health</span>
+                </div>
+                <div class="card-footer">
+                    <div class="tuition-fee">CA$45,200 per year</div>
+                    <a href="{% url 'can_uo_alberta_detail'%}" class="btn-contact">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- University of Waterloo -->
+        <div class="card">
+            <img src="{% static 'images/waterloo.jpeg' %}" alt="University of Waterloo">
+            <div class="card-body">
+                <div class="card-rank">#5</div>
+                <div class="card-title">University of Waterloo</div>
+                <div class="card-location">📍 Waterloo, Canada</div>
+                <div class="card-text">Renowned for co-op programs, computer science, and engineering innovation.</div>
+                <div class="card-tags">
+                    <span>Computer Science</span><span>Mathematics</span><span>Engineering</span><span>AI</span>
+                </div>
+                <div class="card-footer">
+                    <div class="tuition-fee">CA$48,500 per year</div>
+                    <a href="{% url 'can_uo_waterloo_detail'%}" class="btn-contact">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Western University -->
+        <div class="card">
+            <img src="{% static 'images/western.jpeg' %}" alt="Western University">
+            <div class="card-body">
+                <div class="card-rank">#6</div>
+                <div class="card-title">Western University</div>
+                <div class="card-location">📍 London, Canada</div>
+                <div class="card-text">Western is known for business, health sciences, and law programs with global reach.</div>
+                <div class="card-tags">
+                    <span>Business</span><span>Law</span><span>Health</span><span>Social Sciences</span>
+                </div>
+                <div class="card-footer">
+                    <div class="tuition-fee">CA$43,800 per year</div>
+                    <a href="{% url 'can_wu_detail'%}" class="btn-contact">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Queen's University -->
+        <div class="card">
+            <img src="{% static 'images/queens.jpeg' %}" alt="Queen's University">
+            <div class="card-body">
+                <div class="card-rank">#7</div>
+                <div class="card-title">Queen's University</div>
+                <div class="card-location">📍 Kingston, Canada</div>
+                <div class="card-text">One of Canada’s oldest universities, known for business, law, and policy programs.</div>
+                <div class="card-tags">
+                    <span>Business</span><span>Public Policy</span><span>Law</span><span>Engineering</span>
+                </div>
+                <div class="card-footer">
+                    <div class="tuition-fee">CA$44,200 per year</div>
+                    <a href="{% url 'can_qu_detail'%}" class="btn-contact">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Simon Fraser University -->
+        <div class="card">
+            <img src="{% static 'images/sfu.jpeg' %}" alt="Simon Fraser University">
+            <div class="card-body">
+                <div class="card-rank">#8</div>
+                <div class="card-title">Simon Fraser University (SFU)</div>
+                <div class="card-location">📍 Burnaby, Canada</div>
+                <div class="card-text">SFU has strong programs in tech, communications, and environmental science.</div>
+                <div class="card-tags">
+                    <span>Communication</span><span>Tech</span><span>Environmental Science</span><span>Business</span>
+                </div>
+                <div class="card-footer">
+                    <div class="tuition-fee">CA$39,000 per year</div>
+                    <a href="{% url 'can_sfu_detail'%}" class="btn-contact">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- University of Ottawa -->
+        <div class="card">
+            <img src="{% static 'images/ottwa.jpeg' %}" alt="University of Ottawa">
+            <div class="card-body">
+                <div class="card-rank">#9</div>
+                <div class="card-title">University of Ottawa</div>
+                <div class="card-location">📍 Ottawa, Canada</div>
+                <div class="card-text">A bilingual university with top programs in public law, social sciences, and tech.</div>
+                <div class="card-tags">
+                    <span>Law</span><span>Tech</span><span>Social Sciences</span><span>Public Affairs</span>
+                </div>
+                <div class="card-footer">
+                    <div class="tuition-fee">CA$40,000 per year</div>
+                    <a href="{% url 'can_uoo_detail'%}" class="btn-contact">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dalhousie University -->
+        <div class="card">
+            <img src="{% static 'images/dalhousie.jpeg' %}" alt="Dalhousie University">
+            <div class="card-body">
+                <div class="card-rank">#10</div>
+                <div class="card-title">Dalhousie University</div>
+                <div class="card-location">📍 Halifax, Canada</div>
+                <div class="card-text">A top Atlantic Canadian university with strengths in health, ocean studies, and law.</div>
+                <div class="card-tags">
+                    <span>Ocean Studies</span><span>Law</span><span>Health Sciences</span><span>Engineering</span>
+                </div>
+                <div class="card-footer">
+                    <div class="tuition-fee">CA$38,500 per year</div>
+                    <a href="{% url 'can_du_detail'%}" class="btn-contact">View Details</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
 </html>

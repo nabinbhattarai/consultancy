@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Queen's University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/college_detail.css' %}">
+</head>
+<body>
+
+<div class="banner">
+    <div class="overlay">
+        <div class="info">
+            <div class="ranking-badge">🏆 World Ranking #3</div>
+            <h1> Queen's University</h1>
+            <p>📍 Kingston, Canada</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Row: About & Quick Info -->
+    <div class="row">
+        <div class="card about">
+            <h2>📘 About  Queen's University</h2>
+            <p>Queen’s University, located in Kingston, Ontario, is a prestigious and historic Canadian institution blending tradition with modern academic innovation. With its elegant limestone campus set beside Lake Ontario, Queen’s offers a range of undergraduate and graduate programs across disciplines such as arts, engineering, business, health sciences, and law. The student community is close-knit and vibrant, housing many active student societies, varsity teams, performing arts groups, and volunteer initiatives that enrich both university life and local life. Residential colleges foster strong bonds, while academic support, career services, wellness programs, and peer mentoring help students grow personally and professionally. Queen’s campus life is characterized by its friendly atmosphere, spirited school traditions, and a balance of intellectual engagement and social involvement in a beautiful lakeside setting.
+</p>
+        </div>
+        <div class="card quick-info">
+            <h3>Quick Information</h3>
+            <ul>
+                <li><strong>World Ranking:</strong> <span class="badge">#7</span></li>
+                <li><strong>Tuition Fee:</strong> <span class="fee">CA$44,200 per year</span></li>
+                <li><strong>Application Deadline:</strong> <span>January 1, 2025</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Row: Programs & Admission -->
+    <div class="row">
+        <div class="card programs">
+            <h2>🎓 Academic Programs</h2>
+            <div class="tags">
+                <span>Business </span>
+                <span>Law</span>
+                <span>Public policy</span>
+                
+                <span>Engineering</span>
+              
+            </div>
+        </div>
+        <div class="card admission">
+            <h2>📋 Admission Requirements</h2>
+            <ul>
+                <li><strong>Minimum GPA:</strong> 3.9+</li>
+                <li><strong>English Proficiency:</strong> IELTS 7.5+ or TOEFL 100+</li>
+                <li><strong>SAT Score:</strong> 1500+</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Campus Life -->
+    <div class="row">
+        <div class="card full campus">
+            <h2>🏫 Campus Life</h2>
+            <p>Campus life at Queen’s University in Kingston is lively, welcoming, and deeply rooted in a strong sense of community. Set on a walkable campus of beautiful limestone buildings by Lake Ontario, Queen’s offers easy access to downtown shops, cafés, and waterfront trails that enhance both study and leisure </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

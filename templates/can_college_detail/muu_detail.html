@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>McGill University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/college_detail.css' %}">
+</head>
+<body>
+
+<div class="banner">
+    <div class="overlay">
+        <div class="info">
+            <div class="ranking-badge">🏆 World Ranking #3</div>
+            <h1>McGill University</h1>
+            <p>📍 Montreal, Canada</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Row: About & Quick Info -->
+    <div class="row">
+        <div class="card about">
+            <h2>📘 About McGill University</h2>
+            <p>McGill University, located in Montreal, Canada, is a world-renowned research institution known for its academic excellence, diverse student body, and rich history dating back to 1821. It offers a wide range of undergraduate and graduate programs across disciplines such as medicine, law, engineering, arts, and sciences. McGill combines a strong commitment to research and innovation with a vibrant campus life in the heart of a culturally rich and bilingual city. The university prides itself on fostering an inclusive and collaborative community where students engage deeply with both academic pursuits and extracurricular activities, preparing graduates to become global leaders.
+</p>
+        </div>
+        <div class="card quick-info">
+            <h3>Quick Information</h3>
+            <ul>
+                <li><strong>World Ranking:</strong> <span class="badge">#3</span></li>
+                <li><strong>Tuition Fee:</strong> <span class="fee">$57,246 per year</span></li>
+                <li><strong>Application Deadline:</strong> <span>January 1, 2025</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Row: Programs & Admission -->
+    <div class="row">
+        <div class="card programs">
+            <h2>🎓 Academic Programs</h2>
+            <div class="tags">
+                <span>Business Administration</span>
+                <span>Law</span>
+                <span>Computer Science</span>
+                <span>Medicine</span>
+                <span>Engineering</span>
+                <span>Liberal Arts</span>
+            </div>
+        </div>
+        <div class="card admission">
+            <h2>📋 Admission Requirements</h2>
+            <ul>
+                <li><strong>Minimum GPA:</strong> 3.9+</li>
+                <li><strong>English Proficiency:</strong> IELTS 7.5+ or TOEFL 100+</li>
+                <li><strong>SAT Score:</strong> 1500+</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Campus Life -->
+    <div class="row">
+        <div class="card full campus">
+            <h2>🏫 Campus Life</h2>
+            <p>Campus life at McGill University is dynamic and diverse, offering students a vibrant community in the heart of Montreal. The university boasts numerous student clubs, cultural groups, and athletic teams that cater to a wide range of interests and backgrounds. Students benefit from modern facilities alongside historic buildings, creating an inspiring environment for learning and socializing. With a strong emphasis on inclusivity and student support, McGill provides resources for academic success, mental health, and career development. Montreal’s rich cultural scene and bilingual atmosphere further enhance student life, offering endless opportunities for exploration, creativity, and connection both on and off campus.
+</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
